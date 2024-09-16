@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Total Number of Users: <%= count["count(id)"] %></h1>
+    <form method="get" action="/users/new">
+        <button style="background-color: rgb(67, 158, 195);color: white;">Join us today!!</button>
+    </form>
+    <br>
+    <form method="get" action="/users">
+        <button style="background-color: rgb(54, 218, 54);color: white;">Users</button>
+    </form>
+</body>
+</html>

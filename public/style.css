@@ -1,0 +1,11 @@
+table , tr , td,th{
+    border: 1px solid black;
+}
+#edit{
+    background-color: rgb(69, 192, 69);
+    color: white;
+}
+#del{
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let row of user_list) { %>
+                <tr>
+                    <td>
+                        <%= row.id %>
+                    </td>
+                    <td>
+                        <%= row.username %>
+                    </td>
+                    <td>
+                        <%= row.email %>
+                    </td>
+                    <form action="/users/<%= row.id %>/edit">
+                        <td><button id="edit">Edit</button></td>
+                    </form>
+                    <form action="/users/<%= row.id %>/delete">
+                        <td><button id="del">Delete</button></td>
+                    </form>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+</body>
+
+</html>
